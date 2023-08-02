@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:structure_mvvm/routes/app_pages.dart';
 
 GetStorage localStorage = GetStorage();
 
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      getPages: AppPages.routes,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -36,7 +38,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
