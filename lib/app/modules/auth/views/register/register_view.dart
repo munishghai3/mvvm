@@ -16,8 +16,7 @@ class RegisterScreen extends GetView<RegisterControllerScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: ColorConstant.gray50,
-        body: Obx(
-              () => SingleChildScrollView(
+        body: SingleChildScrollView(
             child: Form(
                 key: controller.formKey,
                 child: Container(
@@ -31,6 +30,7 @@ class RegisterScreen extends GetView<RegisterControllerScreen> {
                           _fillTheDetailsText(),
                           _firstAndLastNameTextFields(),
                           _emailTextField(),
+                          _userNameTextField(),
                           _phoneNumberTextField(),
                           _passwordTextField(),
                           _confirmPasswordTextField(),
@@ -39,7 +39,7 @@ class RegisterScreen extends GetView<RegisterControllerScreen> {
                           _alreadyHaveAnAccount(),
                         ]))),
           ),
-        ));
+        );
   }
 
   _signUpText() {
@@ -138,6 +138,23 @@ class RegisterScreen extends GetView<RegisterControllerScreen> {
     ).marginOnly(top: 8);
   }
 
+  _userNameTextField() {
+    return CommonTextFieldWidget(
+      hintText: TextFile.userText.tr,
+      focusNode: controller.userNode,
+      onFieldSubmitted: (value) {
+        controller.userNode.requestFocus();
+      },
+      validator: (value) {
+        return Validation().fieldChecker(value: value,field: TextFile.userText.tr);
+      },
+      textInputAction: TextInputAction.next,
+      inputController: controller.userController,
+      width: widthSizetextField,
+      keyBoardInputType: TextInputType.name,
+    ).marginOnly(top: 8);
+  }
+
   _phoneNumberTextField() {
     return CommonTextFieldWidget(
       hintText: TextFile.phoneNumber.tr,
@@ -232,6 +249,7 @@ class RegisterScreen extends GetView<RegisterControllerScreen> {
         fontStyle: ButtonFontStyle.InterSemiBold18,
         onTap: () {
           if(controller.formKey.currentState!.validate()){
+            controller.signUp();
           }
 
         });

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
+import 'package:structure_mvvm/app/modules/auth/views/login/login_view.dart';
 import 'package:structure_mvvm/routes/app_pages.dart';
 
 GetStorage localStorage = GetStorage();
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       getPages: AppPages.routes,
+      home: LoginScreen(),
       theme: ThemeData(
         // This is the theme of your application.
         //

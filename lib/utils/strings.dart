@@ -6,6 +6,7 @@ class TextFile {
   static const String firstName = "First Name";
   static const String lastName = "last Name";
   static const String emailText = "Email Id";
+  static const String userText = "User Name";
   static const String password = "Password";
   static const String confirmPassword = "Confirm password";
   static const String alreadyHaveAccount = "Already have an account? ";

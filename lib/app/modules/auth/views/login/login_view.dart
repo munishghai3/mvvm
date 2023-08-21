@@ -12,7 +12,9 @@ import 'package:structure_mvvm/utils/size_constant.dart';
 import 'package:structure_mvvm/utils/strings.dart';
 
 class LoginScreen extends GetView<LoginController> {
-  const LoginScreen({Key? key}) : super(key: key);
+  LoginScreen({Key? key}) : super(key: key);
+
+  LoginController controller = Get.put(LoginController());
 
   @override
   Widget build(BuildContext context) {
@@ -104,12 +106,12 @@ class LoginScreen extends GetView<LoginController> {
         fontStyle: ButtonFontStyle.InterSemiBold18,
         onTap: () {
 
-          if(controller.formKey.currentState!.validate()){
-
-              controller.localDbLogin();
-
-
-          }
+          // if(controller.formKey.currentState!.validate()){
+          //
+          //
+          //
+          //
+          // }
 
         });
   }
@@ -150,7 +152,7 @@ class LoginScreen extends GetView<LoginController> {
 
   _form() {
     return Form(
-        key:controller.formKey,
+        // key:controller.formKey,
         child: Column(children: [
           _emailPhoneNumberTextField(),
           _passwordTextField(),

@@ -12,7 +12,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: AppRoutes.loginScreen,
-      page: () => const LoginScreen(),
+      page: () => LoginScreen(),
       binding: AuthBinding(),
     ),
     GetPage(

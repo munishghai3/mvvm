@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:dio/dio.dart';
 
 
 class LoginController extends GetxController {
-  final formKey = GlobalKey<FormState>();
+  // final formKey = GlobalKey<FormState>();
 
   RxBool isVisiblePassword = false.obs;
 
@@ -13,9 +14,6 @@ class LoginController extends GetxController {
   FocusNode passwordNode = FocusNode();
 
 
-/*============================ Local DB Login ============================*/
-  localDbLogin() async {
 
-  }
 
 }
