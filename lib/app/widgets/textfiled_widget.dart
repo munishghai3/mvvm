@@ -208,9 +208,9 @@ class CustomTextFormField extends StatelessWidget {
         );
       default:
         return TextStyle(
-          color: ColorConstant.gray50002,
+          color: ColorConstant.black900,
           fontSize: getFontSize(
-            12,
+            14,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w400,
