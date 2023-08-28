@@ -25,6 +25,7 @@ class TextFile {
   static const String emailError = "Please enter Email Id";
   static const String phoneNumber = "Mobile No.";
   static const String emailMobileText = "Email id / Mobile No.";
+  static const String homeText = "Home";
 
 
 }

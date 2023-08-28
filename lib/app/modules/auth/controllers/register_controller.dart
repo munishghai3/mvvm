@@ -58,7 +58,7 @@ class RegisterControllerScreen extends GetxController {
       SignupResponseModal signupResponseModal = SignupResponseModal.fromJson(response.data);
       if(response.statusCode == 200){
         print("registered ${signupResponseModal.toString()}");
-        Get.toNamed(AppRoutes.loginScreen);
+        Get.toNamed(AppRoutes.homeScreen);
         return signupResponseModal;
       }
       else{
